@@ -1,0 +1,20 @@
+[
+    {
+        "body": "I appreciate how this post succinctly encapsulates the key advantages of the MVC design pattern, emphasizing its role in enhancing software efficiency, manageability, and scalability.",
+        "user_id": 2,
+        "date": "6/9/2023",
+        "post_id": 1
+    },
+    {
+        "body": "While data structures and algorithms can initially seem complex due to their abstract nature, with dedicated practice and a methodical approach, they become an empowering toolset for solving a wide range of software engineering problems.",
+        "user_id": 1,
+        "date": "6/9/2023",
+        "post_id": 2
+    },
+    {
+        "body": "This post effectively highlights the crucial role UI/UX plays in crafting satisfying digital experiences, underlining the fact that design and business success are inherently intertwined.",
+        "user_id": 2,
+        "date": "6/9/2023",
+        "post_id": 3
+    }
+]

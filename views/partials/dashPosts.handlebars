@@ -1,0 +1,16 @@
+{{#each posts as |post|}}
+<div class="card my-4" style="box-shadow: 10px 10px 0px rgb(6, 122, 255)">
+  <div class="card-header bg-primary">
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button">{{title}}</button>
+        {{!-- dropdown --}}
+        {{!-- create and delete --}}
+    </div>
+    
+  </div>
+  <div class="card-body">
+    <p class="card-text text-start">{{body}}</p>
+    <p class="text-end" id="date">posted on: {{date}} </p> {{!-- username, date --}} 
+  </div>
+</div>
+{{/each}}

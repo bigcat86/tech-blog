@@ -1,0 +1,20 @@
+[
+    {
+        "title": "tech.blog first post - MVC",
+        "body": "By cleanly separating concerns, MVC streamlines development and simplifies modifications, leading to more manageable, scalable, and ultimately more successful applications.",
+        "user_id": 1,
+        "date": "6/9/2023"
+    },
+    {
+        "title": "data structures & algorithms",
+        "body": "Mastering data structures and algorithms is the cornerstone of becoming an exceptional software developer, as they lay the groundwork for efficient problem-solving and system design.",
+        "user_id": 2,
+        "date": "6/9/2023"
+    },
+    {
+        "title": "ui/ux",
+        "body": "User Interface (UI) and User Experience (UX) are pivotal elements in the success of any digital product, serving as the bridge between users and the technology at their fingertips.",
+        "user_id": 1,
+        "date": "6/9/2023"
+    }
+]

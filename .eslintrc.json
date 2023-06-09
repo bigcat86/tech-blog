@@ -8,7 +8,7 @@
       "es2018": true
     },
     "rules": {
-      "no-undef-init": "error",
+      "no-undef-init": "warn",
       "no-duplicate-case": "error",
       "no-empty": "error",
       "no-extra-semi": "error",
@@ -24,7 +24,7 @@
       "no-trailing-spaces": "error",
       "default-case": "error",
       "no-fallthrough": "error",
-      "no-use-before-define": "error",
+      "no-use-before-define": "warn",
       "no-redeclare": "error",
       "brace-style": "error",
       "quotes": ["warning", "single"],
