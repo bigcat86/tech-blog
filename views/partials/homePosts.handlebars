@@ -1,0 +1,26 @@
+{{!-- for each --}}
+<div class="card" style="box-shadow: 10px 10px 0px rgb(6, 122, 255)">
+  <h5 class="card-header bg-primary text-light">tech.blog first post</h5>
+  <div class="card-body">
+    <h5 class="card-title text-secondary">blog post</h5>
+    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptates quibusdam, nulla incidunt cum pariatur deserunt, ipsum eum quas, eveniet laudantium porro minima esse autem! 
+        Voluptatum incidunt earum provident corrupti fugit!</p>
+    <h5 class="text-secondary text-start">comments</h5>
+    {{!-- for each --}}
+    <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        comment
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>

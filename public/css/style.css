@@ -1,0 +1,13 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#hero {
+    background-image: url('../images/binary-tech.png');
+    background-size: cover;
+}
+
+#news {
+    font-size: 25px;
+    color: whitesmoke;
+}
