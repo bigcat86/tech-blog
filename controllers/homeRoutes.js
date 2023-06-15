@@ -19,6 +19,24 @@ router.get('/', async(req, res) => {
     }
 })
 
+router.get('/dashboard', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findAll({
+            where: {user_id : req.session.user_id},
+            include: [{ model: User }]
+        });
+        const posts = postData.map(post => post.get({ plain: true }));
+        console.log(posts)
+        res.status(200).render('dashboard', {
+            posts,
+            logged_in: req.session.logged_in
+        });
+
+    } catch (error) {
+        console.log(error);
+    }
+});
+
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');

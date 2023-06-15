@@ -3,14 +3,14 @@
   <div class="card-header bg-primary">
     <div class="d-grid gap-2">
         <button class="btn btn-primary" type="button">{{title}}</button>
-        {{!-- dropdown --}}
-        {{!-- create and delete --}}
+    </div>  
     </div>
-    
-  </div>
-  <div class="card-body">
-    <p class="card-text text-start">{{body}}</p>
-    <p class="text-end" id="date">posted on: {{date}} </p> {{!-- username, date --}} 
-  </div>
+    <div class="card-body">
+        <p class="card-text text-start">{{body}}</p>
+        <p class="text-end" id="date">posted on: {{date}} </p> {{!-- username, date --}} 
+        <button type="button" class="btn btn-danger" id="delete-post" data-bs-id="{{id}}" data-bs-title="{{title}}" onclick="postDelete()">delete post</button>
+    </div>
 </div>
 {{/each}}
+
+<script src="/js/dash.js"></script>

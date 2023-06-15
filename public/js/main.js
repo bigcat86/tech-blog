@@ -1,11 +1,6 @@
-const handleLogin = (event) => {
-    event.preventDefault();
-    document.location.replace('/login');
-}
-
 const handleLogout = async(event) => {
-    event.preventDefault();
-    console.log('im clicked');
+    // event.preventDefault();
+    console.log('im handling logout');
     try {
        const response = await fetch('api/user/logout', {
         method: 'POST',
@@ -13,11 +8,10 @@ const handleLogout = async(event) => {
        });
        if (response.ok) {
         document.location.replace('/login');
+        console.log('logged out');
        }
     } catch (error) {
         alert(error);
     }
 };
 
-// document.querySelector('#login').addEventListener('click', handleLogin);
-document.querySelector('#logout').addEventListener('click', handleLogout);

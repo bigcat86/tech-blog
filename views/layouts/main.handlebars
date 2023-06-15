@@ -22,19 +22,19 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item">
-                <button type="button" class="btn btn-outline-light mx-2">home</button>
+                <a href="/"><button type="button" class="btn btn-outline-light mx-2">home</button></a>
             </li>
             <li>
-                <button type="button" class="btn btn-outline-light mx-2">dashboard</button>
+                <a href="/dashboard"><button type="button" class="btn btn-outline-light mx-2" id="dashboard">dashboard</button></a>
             </li>
             {{!-- if logged_in, logout button --}}
             {{#if logged_in}}
             <li>
-                <button type="button" class="btn btn-outline-light mx-2" id="logout">logout</button>
+                <a href="#"><button type="button" class="btn btn-outline-light mx-2" id="logout" onclick="handleLogout()">logout</button></a>
             </li>
             {{else}}
             <li>
-                <button type="button" class="btn btn-outline-light mx-2" id="login">login</button>
+                <a href="/login"><button type="button" class="btn btn-outline-light mx-2" id="login">login</button></li></a>
             </li>
             {{/if}}
             </ul>

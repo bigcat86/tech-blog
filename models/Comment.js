@@ -35,7 +35,8 @@ Comment.init(
     {
         hooks: {
             beforeCreate: async(newCommentData) => {
-                newCommentData.date = await new Date().toLocaleString().split(',')[0];
+                const today = await new Date();
+                newCommentData.date = today.toLocaleString();
                 return newCommentData;
             }
         },

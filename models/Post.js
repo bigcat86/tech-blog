@@ -33,7 +33,8 @@ Post.init(
     {
         hooks: {
             beforeCreate: async(newPostData) => {
-                newPostData.date = await new Date().toLocaleString().split(',')[0];
+                const today = await new Date();
+                newPostData.date = today.toLocaleString();
                 return newPostData;
             }
         },

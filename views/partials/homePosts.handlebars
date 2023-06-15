@@ -7,7 +7,7 @@
   <div class="card-body">
     <p class="card-text text-start">{{body}}</p>
     <i class="bi bi-hand-thumbs-up align-self-end"></i>
-    <h5 class="text-secondary text-start">comments</h5>
+    <h5 class="text-secondary text-start">comments {{comments.length}}</h5>
     {{#each comments as |comment|}}
     <div class="accordion" id="accordionExample">
     <div class="accordion-item">
@@ -25,6 +25,9 @@
     </div>
   </div>
   {{/each}}
+  </div>
+  <div class="align-items-end m-2">
+    <button type="button" class="btn btn-outline-primary mx-2" id="add-comment">+ comment</button>
   </div>
 </div>
 {{/each}}
