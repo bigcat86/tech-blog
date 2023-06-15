@@ -1,5 +1,5 @@
 {{#each posts as |post|}}
-<div class="card my-4" style="box-shadow: 10px 10px 0px rgb(6, 122, 255)">
+<div class="card my-4" style="box-shadow: 10px 10px 0px rgb(6, 122, 255)" data-post-id="{{id}}" id="post-card">
   <div class="card-header bg-primary text-light d-flex justify-content-between">
     <h5>{{title}}</h5> {{!-- blog title --}} 
     <p class="text-end" id="date">posted by: {{user.user_name}} , on: {{date}} </p> {{!-- username, date --}} 
@@ -26,8 +26,16 @@
   </div>
   {{/each}}
   </div>
-  <div class="align-items-end m-2">
-    <button type="button" class="btn btn-outline-primary mx-2" id="add-comment">+ comment</button>
-  </div>
+  <div class="dropdown">
+  <button class="btn btn-outline-primary dropdown-toggle my-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    + comment
+  </button>
+  <ul class="dropdown-menu">
+    <div class="input-group m-3">
+        <input type="text" class="form-control" placeholder="type comment" aria-label="Recipient's username" aria-describedby="button-addon2" id="new-comment">
+        <button class="btn btn-primary" type="button" id="button-addon2" onclick="commentCreate()">submit</button>
+    </div>
+  </ul>
+</div>
 </div>
 {{/each}}

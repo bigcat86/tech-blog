@@ -7,11 +7,11 @@
 // updateBtn.addEventListener('click', postUpdate);
 
 // file /js/main or dash - button function for create post
-const postCreate = async (event) => {
-    event.preventDefault();
+const postCreate = async () => {
+    // event.preventDefault();
     try {
-        const postTitle = document.getElementById('new-title').value.trim();  //update html with ID's !!
-        const postBody = document.getElementById('new-body').value.trim();
+        const postTitle = document.querySelector('#new-title').value.trim();  //update html with ID's !!
+        const postBody = document.querySelector('#new-body').value.trim();
         
         console.log(postTitle + ' ' + postBody);
 
@@ -24,7 +24,7 @@ const postCreate = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
-            // document.location.replace('/dashboard'); //already doing render??
+            document.location.replace('/dashboard'); //already doing render??
             console.log('new post okay');
         }
 

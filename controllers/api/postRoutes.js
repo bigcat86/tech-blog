@@ -4,11 +4,14 @@ const withAuth = require('../../utils/auth');
 
 //post post route
 router.post('/', withAuth, async(req,res) => {
+    let today = new Date();
+    let date = today.toLocaleDateString();
     try {
         const newPost = await Post.create({
             title: req.body.title,
-            body: req.bod.body,
-            user_id: req.session.user_id
+            body: req.body.body,
+            user_id: req.session.user_id,
+            date: date
         });
 
         const postData = await Post.findAll({
@@ -16,7 +19,7 @@ router.post('/', withAuth, async(req,res) => {
             include: [{ model: User }]
         });
         const posts = postData.map(post => post.get({ plain: true }));
-
+        console.log(posts);
         res.status(200).render('dashboard', {
         posts
         });
